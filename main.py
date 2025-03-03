@@ -31,7 +31,12 @@ def create_new_offer(offers, products, customers):
     choosing products, and calculating totals.
     """
     # Omogućite unos kupca
+    # Print liste kupaca -> kupac upise broj ispred a vi onda pokupite te podatke
+    #       za ovo bi dobro dosla jedna while True petlja s brake izlazom.
+    while True:
+        pass
     # Izračunajte sub_total, tax i total
+    #       Mozda dodati novu funkciju koja racuna total, tax i total
     # Dodajte novu ponudu u listu offers
     pass
 
