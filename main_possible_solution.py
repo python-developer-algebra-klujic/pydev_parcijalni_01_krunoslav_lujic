@@ -23,7 +23,7 @@ def save_data(filename, data):
         json.dump(data, file, indent=4)
 
 
-def compute_totals(items, tax_rate=0.10):
+def compute_totals(items, tax_rate=0.25):
     """
     Given a list of items (each containing `item_total`),
     compute and return sub_total, tax, and total.
@@ -125,7 +125,7 @@ def create_new_offer(offers, products, customers):
         return
 
     # 4. Izračun ukupnih vrijednosti
-    sub_total, tax, total = compute_totals(cart_items, tax_rate=0.10)
+    sub_total, tax, total = compute_totals(cart_items, tax_rate=0.25)
 
     # 5. Generiranje novog offer_number
     if offers:
