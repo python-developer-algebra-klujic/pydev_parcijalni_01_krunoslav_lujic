@@ -8,3 +8,6 @@ class Product:
         self.name = name
         self.price = price
         self.description = description
+
+    def __repr__(self) -> str:
+        return f'Naziv: {self.name}'

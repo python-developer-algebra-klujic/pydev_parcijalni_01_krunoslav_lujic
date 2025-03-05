@@ -9,6 +9,7 @@ def main():
         800.00,
         '15-inch display, 8GB RAM, 256GB SSD')
     products.append(laptop)
+    print(laptop)
 
     smartphone = pr.Product(
         'Smartphone',
@@ -16,6 +17,7 @@ def main():
         '6-inch display, 128GB storage'
     )
     products.append(smartphone)
+    print(smartphone)
 
     print(products)
 
