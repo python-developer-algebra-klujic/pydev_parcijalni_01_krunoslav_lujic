@@ -53,14 +53,14 @@ def create_new_offer(offers, products, customers):
 
     selected_customer = None
     while True:
-        choice = input("Unesite broj ispred kupca (ili 'q' za odustajanje): ")
-        if choice.lower() == 'q':
+        choice = input("Unesite broj ispred kupca (ili 'cancel' za odustajanje): ")
+        if choice.lower() == 'cancel':
             print("Odustali ste od kreiranja ponude.")
             return
         try:
-            choice_idx = int(choice)
-            if 1 <= choice_idx <= len(customers):
-                selected_customer = customers[choice_idx - 1]["name"]
+            choice_index = int(choice)
+            if 1 <= choice_index <= len(customers):
+                selected_customer = customers[choice_index - 1]["name"]
                 break
             else:
                 print("Nepostojeći indeks. Pokušajte ponovo.")
@@ -80,15 +80,15 @@ def create_new_offer(offers, products, customers):
         for p in products:
             print(f"ID: {p['id']} => {p['name']} (Cijena: ${p['price']})")
 
-        product_id_input = input("Unesite ID proizvoda koji želite dodati (ili 'q' za završetak dodavanja): ")
-        if product_id_input.lower() == 'q':
+        product_id_input = input("Unesite ID proizvoda koji želite dodati (ili 'cancel' za završetak dodavanja): ")
+        if product_id_input.lower() == 'cancel':
             break
 
         # Provjera ispravnosti ID-a
         try:
             product_id = int(product_id_input)
         except ValueError:
-            print("Pogrešan unos. Unesite broj ili 'q'.")
+            print("Pogrešan unos. Unesite broj ili 'cancel'.")
             continue
 
         # Pronađi proizvod
